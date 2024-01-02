@@ -1,0 +1,13 @@
+<h2>L'utilisateur :</h2>
+<div class="infosUser">
+    <p>nom : {{nom}}</p>
+    <p>prénom : {{prenom}}</p>
+    <p>age : {{age}}</p>
+    <!--two way binding-->
+    le genre de l'user stp : <input type="text" [(ngModel)]="genre">
+    dcp voici le genre de l'user : {{genre}}
+<br/>
+    <button type="button" (click)="incrementAge()">incrementer age</button>
+    <button type="button" (click)="decrementAge()">decrementer age</button>
+    {{age}}
+</div>
