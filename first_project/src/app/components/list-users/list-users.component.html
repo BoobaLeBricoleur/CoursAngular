@@ -1,0 +1,12 @@
+<p>Affichage de la putain de liste</p>
+
+<p>ici ça liste</p>
+<button type="button" (click)="toggleVisibility()">boutton</button>
+<div *ngIf="hidden">
+    <ul *ngFor="let user of users; let i = index">
+        <h1>{{i*4}}</h1>
+        <li>nom du truc : {{user.nom}}</li>
+        <li>prenom du truc : {{user.prenom}}</li>
+        <li>age du truc : {{user.age}}</li>
+    </ul>
+</div>

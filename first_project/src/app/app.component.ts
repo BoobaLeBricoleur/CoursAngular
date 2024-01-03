@@ -5,11 +5,13 @@ import { PremiercompoComponent } from './components/premiercompo/premiercompo.co
 import { DeuxiemeTrucComponent } from './components/deuxieme-truc/deuxieme-truc.component';
 import { UserComponent } from './components/user/user.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { Tp1Component } from './components/tp1/tp1.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PremiercompoComponent, DeuxiemeTrucComponent, UserComponent, AlertComponent],
+  imports: [CommonModule, RouterOutlet, PremiercompoComponent, DeuxiemeTrucComponent, UserComponent, AlertComponent, ListUsersComponent, Tp1Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

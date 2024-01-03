@@ -1,0 +1,34 @@
+<p>tp1 works!</p>
+
+<p>ici ça liste</p>
+<button type="button" (click)="toggleVisibility()">boutton qui affiche les pairs</button>
+<div>
+    <ul *ngFor="let user of users; let i = index">
+        <ng-container *ngIf="showOnlyOddIds ? user.id % 2 !== 0 : true">
+            <h1>{{ i }}</h1>
+            <li>ID : {{ user.id }}</li>
+            <li>Nom : {{ user.name }}</li>
+            <li>Username : {{ user.username }}</li>
+            <li>Email : {{ user.email }}</li>
+            <li>Téléphone : {{ user.phone }}</li>
+            <li>Site Web : {{ user.website }}</li>
+            <li>Entreprise : {{ user.company.name }}</li>
+            <li>CatchPhrase : {{ user.company.catchPhrase }}</li>
+            <li>BS : {{ user.company.bs }}</li>
+            <li>Adresse :
+                <ul>
+                    <li>Rue : {{ user.address.street }}</li>
+                    <li>Suite : {{ user.address.suite }}</li>
+                    <li>Ville : {{ user.address.city }}</li>
+                    <li>Code Postal : {{ user.address.zipcode }}</li>
+                    <li>Géo :
+                        <ul>
+                            <li>Lat : {{ user.address.geo.lat }}</li>
+                            <li>Lng : {{ user.address.geo.lng }}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ng-container>
+    </ul>
+</div>
